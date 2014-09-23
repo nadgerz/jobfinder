@@ -1,0 +1,23 @@
+{
+  "name": "workspace",
+  "version": "0.1.0",
+  "description": "Job Finder App",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "node",
+    "angular",
+    "ci"
+  ],
+  "author": "Stephen Ingram",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.8.1",
+    "jade": "^1.5.0"
+  },
+  "devDependencies": {
+    "bower": "^1.3.9"
+  }
+}
