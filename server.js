@@ -20,7 +20,9 @@ app.get('*', function(req, res) {
     res.render('index');
 });
 
-mongoose.connect('mongodb://localhost/jobfinder');
+//mongoose.connect('mongodb://localhost/jobfinder');
+mongoose.connect('mongodb://dms:nrg@ds039850.mongolab.com:39850/jobfinder');
+
 
 var conn = mongoose.connection;
 
