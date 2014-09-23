@@ -10,7 +10,10 @@ app.set('view engine', 'jade');
 app.use(express.static(__dirname + '/public'));
 
 app.get('/api/jobs', function(req, res) {
-    res.send('test');
+    mongoose.model('Job').find({})
+                         .exec(function(err, collection) {
+                             res.send(collection);
+                         });
 });
 
 app.get('*', function(req, res) {
@@ -23,6 +26,7 @@ var conn = mongoose.connection;
 
 conn.once('open', function() {
     console.log('connected to mongo successfully');
+    jobModel.seedJobs();
 });
 
 // we need to do the following rather than just a port number because
