@@ -9,11 +9,11 @@ var Job = mongoose.model('Job', jobSchema);
 
 exports.seedJobs = function() {
     Job.find({}).exec(function(err, collection){
-        if (collection.length === 0) {
+        if (collection.length === 4) {
             Job.create({title:'xxx', description: 'flibble'});
             Job.create({title:'abc', description: 'glibble'});
             Job.create({title:'123', description: 'hlibble'});
-            Job.create({title:'bob', description: 'ilibble'});
+            Job.create({title:'bob', description: 'jlibble'});
         };
     });
 }
