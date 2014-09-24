@@ -18,7 +18,7 @@ exports.seedJobs = function() {
                 Job.create({title:'xxx', description: 'flibble'});
                 Job.create({title:'abc', description: 'glibble'});
                 Job.create({title:'123', description: 'hlibble'});
-                Job.create({title:'bob', description: 'jlibble'}, resolve);
+                Job.create({title:'bob', description: 'jlibble'});
             }
         });
 };
