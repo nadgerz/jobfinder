@@ -16,11 +16,11 @@ describe("get jobs", function() {
             resetJobs()
             .then(jobModel.seedJobs)
             .then(function() {
-                    mongoose.model('Job').find({}).exec(function(err, jobsList) {
-                        expect(jobsList.length).to.be.at.least(1);
-                        done();
-                    });
+                mongoose.model('Job').find({}).exec(function(err, jobsList) {
+                    expect(jobsList.length).to.be.at.least(1);
+                    done();
                 });
             });
         });
+    });
 });
