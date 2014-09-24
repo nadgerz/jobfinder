@@ -11,11 +11,9 @@ var Job = mongoose.model('Job', jobSchema);
 function findJobs(query) {
     return Promise.cast(mongoose.model('Job').find(query).exec());
 }
+
 exports.seedJobs = function() {
-    return new Promise( function(resolve, reject) {
-        Job.find({}).exec(function(error, collection) {
-            // console.log("error");
-            // console.log(collection.length);
+        findJobs({}).then(function(collection) {
             if (collection.length === 0) {
                 Job.create({title:'xxx', description: 'flibble'});
                 Job.create({title:'abc', description: 'glibble'});
@@ -23,6 +21,5 @@ exports.seedJobs = function() {
                 Job.create({title:'bob', description: 'jlibble'}, resolve);
             }
         });
-    });
 };
 
