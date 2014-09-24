@@ -14,6 +14,7 @@
   "author": "Stephen Ingram",
   "license": "ISC",
   "dependencies": {
+    "bluebird": "^2.3.2",
     "express": "^4.8.1",
     "jade": "^1.5.0",
     "mongoose": "^3.8.16"
