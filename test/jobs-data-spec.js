@@ -4,7 +4,7 @@ var jobModel = require("../models/Job");
 
 
 function resetJobs(callback) {
-    mongoose.connect.collections['jobs'].drop(callback);
+    mongoose.connection.collections['jobs'].drop(callback);
 }
 
 
