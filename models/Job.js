@@ -10,7 +10,7 @@ var Job = mongoose.model('Job', jobSchema);
 
 exports.seedJobs = function() {
     return new Promise( function(resolve, reject) {
-        Job.find({}).exec(function(err, collection){
+        Job.find({}).exec(function(err, collection) {
             if (collection.length === 0) {
                 Job.create({title:'xxx', description: 'flibble'});
                 Job.create({title:'abc', description: 'glibble'});
@@ -18,6 +18,6 @@ exports.seedJobs = function() {
                 Job.create({title:'bob', description: 'jlibble'}, resolve);
             };
         });
-    };
+    });
 }
 
