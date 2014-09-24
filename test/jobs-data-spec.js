@@ -14,7 +14,7 @@ describe("get jobs", function() {
     it("should never be empty since jobs are seeded", function(done) {
         mongoose.connect('mongodb://localhost/jobfinder', function() {
             resetJobs()
-            .then(jobModel.seedJobs())
+            .then(jobModel.seedJobs)
             .then(function() {
                     mongoose.model('Job').find({}).exec(function(err, jobsList) {
                         expect(jobsList.length).to.be.at.least(1);
