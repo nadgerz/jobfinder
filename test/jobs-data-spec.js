@@ -23,5 +23,4 @@ describe("get jobs", function() {
                 });
             });
         });
-    });
 });
