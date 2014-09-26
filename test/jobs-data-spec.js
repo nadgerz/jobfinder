@@ -1,6 +1,6 @@
 var expect = require("chai").expect;
 var mongoose = require('mongoose');
-var jobModel = require('../models/Job');
+//var jobModel = require('../models/Job');
 var Promise = require('bluebird');
 var jobsData = require('../jobs-data.js');
 
@@ -15,14 +15,14 @@ describe("get jobs", function() {
 
     var jobs;
     var db_url;
-    db_url = 'mongodb://dms:nrg@ds039850.mongolab.com:39850/jobfinder';
     db_url = 'mongodb://localhost/jobfinder';
+    db_url = 'mongodb://dms:nrg@ds039850.mongolab.com:39850/jobfinder';
 
     before(function(done) {
-        this.timeout(5000);
+        //this.timeout(5000);
         jobsData.connectDB(db_url)
             .then(resetJobs)
-            .then(jobModel.seedJobs)
+            .then(jobsData.seedJobs)
             .then(jobsData.findJobs)
             .then(function(collection) {
                 jobs = collection;
