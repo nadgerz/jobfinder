@@ -1,4 +1,4 @@
-ar expect = require("chai").expect;
+var expect = require("chai").expect;
 var mongoose = require('mongoose');
 var jobModel = require('../models/Job');
 var Promise = require('bluebird');
